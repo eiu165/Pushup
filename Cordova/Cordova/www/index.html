@@ -1,35 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.2.0.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.2.0.css" />
-         
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div data-role="page" data-theme="b">
-            <div data-role="header">
-                head
-            </div>
-            <div data-role="content">
-                <h1>Apache Cordova</h1>
-                <div id="deviceready" class="blink">
-                    <p class="event listening">Connecting to Device</p>
-                    <p class="event received">Device is Ready</p>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova-2.1.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>  
-        <script type="text/javascript" src="js/jquery-1.8.2.js"></script>  
-        <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>  
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+<head>
+<title>Employee Directory</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+    
+<body>
+        
+<div id="employeeListPage" data-role="page" >
+
+	<div data-role="header" data-position="fixed">
+		<h1>Employee Directory</h1>
+	</div>
+
+	<div data-role="content">
+         <ul id="employeeList" data-role="listview" data-filter="true"></ul>
+    </div>		
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/employeelist.js"></script>
+<script src="js/employeedetails.js"></script>
+<script src="js/reportlist.js"></script>
+
+</body>
+
 </html>
