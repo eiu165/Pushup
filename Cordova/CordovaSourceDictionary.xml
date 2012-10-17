@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This file is auto-generated, do not edit! -jm -->
 <CordovaSourceDictionary>
-    <FilePath Value="www\indexOld.html"/>
+    <FilePath Value="www\index.html"/>
     <FilePath Value="www\css\jquery.mobile-1.2.0.css"/>
     <FilePath Value="www\css\jquery.mobile.structure-1.2.0.css"/>
     <FilePath Value="www\css\jquery.mobile.theme-1.2.0.css"/>
@@ -11,5 +11,5 @@
     <FilePath Value="www\js\jquery.mobile-1.2.0.js"/>
     <FilePath Value="www\cordova-2.1.0.js"/>
     <FilePath Value="www\css\index.css"/>
-    <FilePath Value="www\index.html"/>
+    <FilePath Value="www\indexCamera.html"/>
 </CordovaSourceDictionary>

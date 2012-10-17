@@ -170,7 +170,7 @@
     <Resource Include="www\css\images\icons-18-white.png" />
     <Resource Include="www\css\images\icons-36-black.png" />
     <Resource Include="www\css\images\icons-36-white.png" />
-    <Content Include="www\indexOld.html">
+    <Content Include="www\index.html">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="www\css\jquery.mobile-1.2.0.css" />
@@ -194,7 +194,7 @@
     <None Include="BuildManifestProcessor.js" />
     <Content Include="www\cordova-2.1.0.js" />
     <Content Include="www\css\index.css" />
-    <Content Include="www\index.html">
+    <Content Include="www\indexCamera.html">
       <SubType>Designer</SubType>
     </Content>
     <None Include="cordova\debug.bat" />

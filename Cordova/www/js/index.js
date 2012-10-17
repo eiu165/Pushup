@@ -61,29 +61,26 @@ var app = {
         });
 
         $('#camerapage').live('pageshow', function () {
-            $('#takepicture').click(function() {
-
-            navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+            $('#takepicture').click(function () {
+                console.log('navigator.camera: ' + navigator.camera);
+                navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
             });
         });
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = $('.listening');
-        var receivedElement = $('.received');
-
-        listeningElement.css('display', 'none');
-        receivedElement.css('display', 'block');
-
+        $('.listening').css('display', 'none');
+        $('.received').css('display', 'block');
         console.log('Received Event: ' + id);
+    },
+    onSuccess: function (fileUri) {
+        console.log('success onSuccess picture' + fileUri);
+        $('#imageuri').html(fileUri);
+    },
+    onError: function () {
+        console.log('error');
     }
-};
 
-function onSuccess(fileUri) {
-    $('#imageuri').html(fileUri);
-}
-function onError() {
-    console.log('error');
-}
+
+};
 

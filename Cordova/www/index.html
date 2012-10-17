@@ -1,107 +1,149 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <title>Capture Photo</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+         
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.2.0.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.2.0.css" />
+         
+        <title>Hello World</title>
+    </head>
+    <body>
 
-    <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
-    <script type="text/javascript" charset="utf-8">
+        <div data-role="page" id="home" data-theme="b">
+            <div data-role="header">
+                <h4>header</h4>
+            </div>
+            <div data-role="content">
+                <h1>Cordova</h1>
+                <div id="deviceready" class="blink">
+                    <p class="event listening">Connecting to Device</p>
+                    <p class="event received">Device is Ready <label id="nameLabel"></label></p> 
+                    <a href="#newpage" data-role="button" >new page</a>
+                    <a href="#listpage" data-role="button" >list page</a>
+                    <a href="#page3" data-role="button" >page3</a>
+                    
+                    <a href="#devicepage" data-role="button" >device info</a>
+                    <a href="#camerapage" data-role="button" >camera</a>
 
-        var pictureSource;   // picture source
-        var destinationType; // sets the format of returned value 
+					
 
-        // Wait for Cordova to connect with the device
-        //
-        document.addEventListener("deviceready", onDeviceReady, false);
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <a href="#dialogpage" data-rel="dialog" data-icon="plus">Add Something</a> 
+            </div>
+        </div>
+        
+        <div data-role="page" id="camerapage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="home">home</a>
+                <h4>camera page</h4>  
+            </div>
+            <div data-role="content">
+                
+                    <a id="takepicture" data-role="button" >take picture</a>
+                    <p id="imageuri"></p>
+            </div> 
+        </div>
+        
+        <div data-role="page" id="Div1" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="home">home</a>
+                <h4>new page</h4>  
+            </div>
+            <div data-role="content">aaaaaaaaaaaa
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4>
+            </div>
+        </div>
+        
+        
+        
+					
+        <div data-role="page" id="devicepage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="home">home</a>
+                <h4>new page</h4>  
+            </div>
+            <div data-role="content"> 
+                    <br/>
+                    <p id="devicename"></p>
+                    <p id="devicephonegap"></p>
+                    <p id="deviceplatform"></p>
+                    <p id="deviceuuid"></p>
+                    <p id="deviceversion"></p>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4>
+            </div>
+        </div>
+        
+        
 
-        // Cordova is ready to be used!
-        //
-        function onDeviceReady() {
-            pictureSource = navigator.camera.PictureSourceType;
-            destinationType = navigator.camera.DestinationType;
-        }
 
-        // Called when a photo is successfully retrieved
-        //
-        function onPhotoDataSuccess(imageData) {
-            // Uncomment to view the base64 encoded image data
-            // console.log(imageData);
+        <div data-role="page" id="newpage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="delete">cancel</a>
+                <h4>new page</h4> 
+                <a href="#home" data-icon="save">save</a>
+            </div>
+            <div data-role="content">
+                <label for="name">what is your name:</label>
+                <input type="text" name="name" id="name" value="" />
+                <a id="savebutton" data-role="button" >save</a> 
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="listpage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="delete">cancel</a>
+                <h4>new page</h4> 
+                <a href="#home" data-icon="save">save</a>
+            </div>
+            <div data-role="content"> 
+                <br/>
+                <ul data-role="listview" data-theme="b" data-filter="true">
+                    <li><a href="" >Denver</a></li>  
+                    <li><a href="" >Chicago</a></li>
+                    <li><a href="" >Indianapolis</a></li>
+                    <li><a href="" >NewOrleans</a></li>
+                    <li><a href="" >Jacksonville</a></li>
+                    <li><a href="" >TampaBay</a></li>
+                    <li><a href="" >Tennessee</a></li>
+                    <li><a href="" >Baltimore</a></li> 
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="dialogpage" data-theme="b"> 
+            <div data-role="header"> 
+                <h4>Dialog</h4> 
+            </div>
+            <div data-role="content">
+                 This is a dialog!
+            </div> 
+        </div>
 
-            // Get image handle
-            //
-            var smallImage = document.getElementById('smallImage');
 
-            // Unhide image elements
-            //
-            smallImage.style.display = 'block';
-
-            // Show the captured photo
-            // The inline CSS rules are used to resize the image
-            //
-            smallImage.src = "data:image/jpeg;base64," + imageData;
-        }
-
-        // Called when a photo is successfully retrieved
-        //
-        function onPhotoURISuccess(imageURI) {
-            // Uncomment to view the image file URI 
-            // console.log(imageURI);
-
-            // Get image handle
-            //
-            var largeImage = document.getElementById('largeImage');
-
-            // Unhide image elements
-            //
-            largeImage.style.display = 'block';
-
-            // Show the captured photo
-            // The inline CSS rules are used to resize the image
-            //
-            largeImage.src = imageURI;
-        }
-
-        // A button will call this function
-        //
-        function capturePhoto() {
-            // Take picture using device camera and retrieve image as base64-encoded string
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-                destinationType: destinationType.DATA_URL
-            });
-        }
-
-        // A button will call this function
-        //
-        function capturePhotoEdit() {
-            // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
-                destinationType: destinationType.DATA_URL
-            });
-        }
-
-        // A button will call this function
-        //
-        function getPhoto(source) {
-            // Retrieve image file location from specified source
-            navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
-                destinationType: destinationType.FILE_URI,
-                sourceType: source
-            });
-        }
-
-        // Called if something bad happens.
-        // 
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
-
-    </script>
-  </head>
-  <body>
-    <button onclick="capturePhoto();">Capture Photo</button> <br>
-    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-    <img style="display:none;" id="largeImage" src="" />
-  </body>
+        <script type="text/javascript" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" src="js/jquery-1.8.2.js"></script>  
+        <script type="text/javascript" src="js/index.js"></script>  
+        <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>  
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>
