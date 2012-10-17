@@ -21,10 +21,15 @@
                 <h1>Cordova</h1>
                 <div id="deviceready" class="blink">
                     <p class="event listening">Connecting to Device</p>
-                    <p class="event received">Device is Ready </p> <label id="nameLabel"></label>
+                    <p class="event received">Device is Ready <label id="nameLabel"></label></p> 
                     <a href="#newpage" data-role="button" >new page</a>
                     <a href="#listpage" data-role="button" >list page</a>
                     <a href="#page3" data-role="button" >page3</a>
+                    
+                    <a href="#devicepage" data-role="button" >device info</a>
+
+					
+
                 </div>
             </div>
             <div data-role="footer" data-position="fixed">
@@ -44,6 +49,29 @@
             </div>
         </div>
         
+        
+        
+					
+        <div data-role="page" id="devicepage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="home">home</a>
+                <h4>new page</h4>  
+            </div>
+            <div data-role="content"> 
+                    <br/>
+                    <p id="devicename"></p>
+                    <p id="devicephonegap"></p>
+                    <p id="deviceplatform"></p>
+                    <p id="deviceuuid"></p>
+                    <p id="deviceversion"></p>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4>
+            </div>
+        </div>
+        
+        
+
 
         <div data-role="page" id="newpage" data-theme="b">
             <div data-role="header">

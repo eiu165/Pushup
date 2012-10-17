@@ -50,9 +50,15 @@ var app = {
         $('#home').live('pageshow', function () {
             var personName = window.localStorage.getItem("name");
             console.log(' the person name is :' + personName); 
-                $('#nameLabel').text(personName); 
-        });
-        
+            $('#nameLabel').text(personName);
+        }); 
+        $('#devicepage').live('pageshow', function () {
+            $("#devicename").html(device.name);
+            $("#devicephonegap").html(device.phonegap);
+            $("#deviceplatform").html(device.platform);
+            $("#deviceuuid").html(device.uuid);
+            $("#deviceversion").html(device.version);
+        });  
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
