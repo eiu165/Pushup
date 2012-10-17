@@ -36,7 +36,7 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
 
-        console.log(' hello ' );
+        console.log(' hello ');
 
         $('#savebutton').click(function () {
             window.localStorage.setItem("name", $('#name').val());
@@ -49,16 +49,23 @@ var app = {
         });
         $('#home').live('pageshow', function () {
             var personName = window.localStorage.getItem("name");
-            console.log(' the person name is :' + personName); 
+            console.log(' the person name is :' + personName);
             $('#nameLabel').text(personName);
-        }); 
+        });
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
             $("#devicephonegap").html(device.phonegap);
             $("#deviceplatform").html(device.platform);
             $("#deviceuuid").html(device.uuid);
             $("#deviceversion").html(device.version);
-        });  
+        });
+
+        $('#camerapage').live('pageshow', function () {
+            $('#takepicture').click(function() {
+
+            navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+            });
+        });
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
@@ -72,3 +79,11 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function onSuccess(fileUri) {
+    $('#imageuri').html(fileUri);
+}
+function onError() {
+    console.log('error');
+}
+
