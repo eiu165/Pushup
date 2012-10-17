@@ -28,7 +28,7 @@ var app = {
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
+    }, 
     // deviceready Event Handler
     //
     // The scope of `this` is the event. In order to call the `receivedEvent`
@@ -36,22 +36,10 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
 
-        console.log(' hello ' );
+        console.log(' hello ');
 
-        $('#savebutton').click(function () {
-            window.localStorage.setItem("name", $('#name').val());
-        });
-        $('#newpage').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            if (personName.length > 0) {
-                $('#name').val(personName);
-            }
-        });
-        $('#home').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            console.log(' the person name is :' + personName); 
-            $('#nameLabel').text(personName);
-        }); 
+        var wId = navigator.accelerometer.watchAcceleration(onSuccess, onerror, { frequency: 1000 });
+     
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
             $("#devicephonegap").html(device.phonegap);
@@ -59,16 +47,31 @@ var app = {
             $("#deviceuuid").html(device.uuid);
             $("#deviceversion").html(device.version);
         });  
+
+
     },
+
     // Update DOM on a Received Event
-    receivedEvent: function (id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = $('.listening');
-        var receivedElement = $('.received');
-
-        listeningElement.css('display', 'none');
-        receivedElement.css('display', 'block');
-
-        console.log('Received Event: ' + id);
+    receivedEvent: function (id) { 
+        $('.listening').css('display', 'none');
+        $('.received').css('display', 'block'); 
+        console.log('Received Event: ' + id + '      $(".listening").length:'+ $(".listening").length+ '      $(".received").length:'+$(".received").length   );
     }
 };
+
+
+
+
+function onSuccess (a) {
+        console.log('onSuccess ' + a.timestamp);
+        $('#ax').html(a.x);
+        $('#ay').html(a.y);
+        $('#az').html(a.z);
+        $('#aTime').html(a.timestamp);
+    } 
+    function  onError ( ) {
+        console.log('error');
+    }
+    
+    
+
