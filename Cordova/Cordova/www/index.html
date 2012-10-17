@@ -22,26 +22,62 @@
                     <p class="event listening">Connecting to Device</p>
                     <p class="event received">Device is Ready</p> 
                     <a href="#newpage" data-role="button" >new page</a>
+                    <a href="#listpage" data-role="button" >list page</a>
                 </div>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>footer</h4>
+                <a href="#dialogpage" data-rel="dialog" data-icon="plus">Add Something</a> 
             </div>
         </div>
+        
+
         <div data-role="page" id="newpage" data-theme="b">
             <div data-role="header">
-                <h4>new page</h4>
+                <a href="#home" data-icon="delete">cancel</a>
+                <h4>new page</h4> 
+                <a href="#home" data-icon="save">save</a>
             </div>
             <div data-role="content">
                 <label for="name">what is your name:</label>
                 <input type="text" name="name" id="name" value="" />
-                <a id="savebutton" data-role="button" >save</a>
+                <a id="savebutton" data-role="button" >save</a> 
             </div>
             <div data-role="footer" data-position="fixed">
                 <h4>footer</h4>
             </div>
         </div>
         
+        
+        <div data-role="page" id="listpage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="delete">cancel</a>
+                <h4>new page</h4> 
+                <a href="#home" data-icon="save">save</a>
+            </div>
+            <div data-role="content"> 
+                <br/>
+                <ul data-role="listview" data-theme="b" data-filter="true">
+                    <li><a href="" >One</a></li>
+                    <li><a href="" >Two</a></li>
+                    <li><a href="" >Three</a></li>
+                    <li><a href="" >Four</a></li>  
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="dialogpage" data-theme="b"> 
+            <div data-role="header"> 
+                <h4>Dialog</h4> 
+            </div>
+            <div data-role="content">
+                 This is a dialog!
+            </div> 
+        </div>
+
 
         <script type="text/javascript" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" src="js/jquery-1.8.2.js"></script>  

@@ -18,32 +18,41 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         this.bindEvents();
-        
+
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // `load`, `deviceready`, `offline`, and `online`.
-    bindEvents: function() {
+    bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        $('#savebutton').click(function () {
+            window.localStorage.setItem("name", $('#name').val());
+        });
+        $('#newpage').live('pageshow', function () {
+            var personName = window.localStorage.getItem("name");
+            if (personName.length > 0) {
+                $('#name').val(personName);
+            }
+        });
     },
     // deviceready Event Handler
     //
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
-    onDeviceReady: function() {
+    onDeviceReady: function () {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = $('.listening');
         var receivedElement = $('.received');
 
         listeningElement.css('display', 'none');
-        receivedElement.css('display', 'block'); 
+        receivedElement.css('display', 'block');
 
         console.log('Received Event: ' + id);
     }
