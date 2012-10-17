@@ -28,6 +28,16 @@ var app = {
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of `this` is the event. In order to call the `receivedEvent`
+    // function, we must explicity call `app.receivedEvent(...);`
+    onDeviceReady: function () {
+        app.receivedEvent('deviceready');
+
+        console.log(' hello ' );
+
         $('#savebutton').click(function () {
             window.localStorage.setItem("name", $('#name').val());
         });
@@ -37,13 +47,12 @@ var app = {
                 $('#name').val(personName);
             }
         });
-    },
-    // deviceready Event Handler
-    //
-    // The scope of `this` is the event. In order to call the `receivedEvent`
-    // function, we must explicity call `app.receivedEvent(...);`
-    onDeviceReady: function () {
-        app.receivedEvent('deviceready');
+        $('#home').live('pageshow', function () {
+            var personName = window.localStorage.getItem("name");
+            console.log(' the person name is :' + personName); 
+                $('#nameLabel').text(personName); 
+        });
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
