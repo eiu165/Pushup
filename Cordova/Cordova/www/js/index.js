@@ -61,9 +61,9 @@ var app = {
         });
 
         $('#camerapage').live('pageshow', function () {
-            $('#takepicture').click(function() {
-
-            navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+            $('#takepicture').click(function () {
+                console.log('taking picture');
+                navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
             });
         });
     },
@@ -81,7 +81,9 @@ var app = {
 };
 
 function onSuccess(fileUri) {
+    console.log('taking picture onSuccess');
     $('#imageuri').html(fileUri);
+    console.log('taking picture onSuccess done');
 }
 function onError() {
     console.log('error');
