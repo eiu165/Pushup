@@ -170,16 +170,17 @@
     <Resource Include="www\css\images\icons-18-white.png" />
     <Resource Include="www\css\images\icons-36-black.png" />
     <Resource Include="www\css\images\icons-36-white.png" />
-    <Content Include="www\index.html">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="www\cordova-2.1.0.js" />
+    <Content Include="www\css\index.css" />
     <Content Include="www\css\jquery.mobile-1.2.0.css" />
     <Content Include="www\css\jquery.mobile.structure-1.2.0.css" />
     <Content Include="www\css\jquery.mobile.theme-1.2.0.css" />
-    <Content Include="www\img\logo.png" />
+    <Resource Include="www\img\logo.png" />
+    <Content Include="www\index.html" />
     <Content Include="www\js\index.js" />
     <Content Include="www\js\jquery-1.8.2.js" />
     <Content Include="www\js\jquery.mobile-1.2.0.js" />
+    <Content Include="www\master.css" />
     <None Include="VERSION" />
     <Resource Include="cordovalib\Images\appbar.back.rest.png" />
     <Resource Include="cordovalib\Images\appbar.close.rest.png" />
@@ -192,11 +193,6 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="BuildManifestProcessor.js" />
-    <Content Include="www\cordova-2.1.0.js" />
-    <Content Include="www\css\index.css" />
-    <Content Include="www\indexCamera.html">
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="cordova\debug.bat" />
     <None Include="cordova\emulate.bat" />
     <None Include="Properties\AppManifest.xml">

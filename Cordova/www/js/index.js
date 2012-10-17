@@ -54,7 +54,7 @@ var app = {
         });
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
-            $("#devicephonegap").html(device.phonegap);
+            $("#devicephonegap").html(device.cordova);
             $("#deviceplatform").html(device.platform);
             $("#deviceuuid").html(device.uuid);
             $("#deviceversion").html(device.version);
@@ -65,8 +65,26 @@ var app = {
                 console.log('navigator.camera: ' + navigator.camera);
                 navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
             });
-        }); 
+        });
         $('#Output').html('navigator.camera: ' + navigator.camera);
+
+
+        $('.goMap').live('click', function () {
+            console.log('navigator.geolocation: ' + navigator.geolocation);
+            if (navigator.geolocation) {
+                    //detectBrowser();
+                    navigator.geolocation.getCurrentPosition(function (position) { Newinitialize(position.coords.latitude, position.coords.longitude);
+                });
+            } else {
+                console.log('navigator.geolocation  not there ' );
+                //detectBrowser();
+                Newinitialize(52.636161, -1.133065);
+            }
+            console.log('about to hide button : ' );
+            $('.goMap').hide();
+        });
+
+
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {

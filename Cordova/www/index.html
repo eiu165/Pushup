@@ -8,11 +8,10 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.2.0.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.2.0.css" />
-         
+        <link rel="Stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
     <body>
-
         <div data-role="page" id="home" data-theme="b">
             <div data-role="header">
                 <h4>header</h4>
@@ -24,12 +23,12 @@
                     <p class="event received">Device is Ready <label id="nameLabel"></label></p> 
                     <a href="#newpage" data-role="button" >new page</a>
                     <a href="#listpage" data-role="button" >list page</a>
-                    <a href="#page3" data-role="button" >page3</a>
+                    <a href="#page3" data-role="button" >Geolocation</a>
                     
                     <a href="#devicepage" data-role="button" >device info</a>
-                    <a href="#camerapage" data-role="button" >camera</a>
-                    
-                    <p id="Output"></p>
+
+					
+
                 </div>
             </div>
             <div data-role="footer" data-position="fixed">
@@ -37,26 +36,16 @@
             </div>
         </div>
         
-        <div data-role="page" id="camerapage" data-theme="b">
+        <div data-role="page" id="page3" data-theme="b">
             <div data-role="header">
                 <a href="#home" data-icon="home">home</a>
-                <h4>camera page</h4>  
+                <h4>Geolocation</h4>  
             </div>
             <div data-role="content">
-                
-                    <a id="takepicture" data-role="button" >take picture</a>
-                    <p id="imageuri"></p>
-            </div> 
-        </div>
-        
-        <div data-role="page" id="Div1" data-theme="b">
-            <div data-role="header">
-                <a href="#home" data-icon="home">home</a>
-                <h4>new page</h4>  
+                <a data-role="button" class="goMap">Get Location</a>
+                <div id="map"></div>
             </div>
-            <div data-role="content">aaaaaaaaaaaa
-            </div>
-            <div data-role="footer" data-position="fixed">
+            <div data-role="footer"data-position="fixed">
                 <h4>footer</h4>
             </div>
         </div>
@@ -70,12 +59,12 @@
                 <h4>new page</h4>  
             </div>
             <div data-role="content"> 
-                    <br/>
-                    <p id="devicename"></p>
-                    <p id="devicephonegap"></p>
-                    <p id="deviceplatform"></p>
-                    <p id="deviceuuid"></p>
-                    <p id="deviceversion"></p>
+                <br/>
+                <p id="devicename"></p>
+                <p id="devicephonegap"></p>
+                <p id="deviceplatform"></p>
+                <p id="deviceuuid"></p>
+                <p id="deviceversion"></p>
             </div>
             <div data-role="footer" data-position="fixed">
                 <h4>footer</h4>
@@ -87,9 +76,8 @@
 
         <div data-role="page" id="newpage" data-theme="b">
             <div data-role="header">
-                <a href="#home" data-icon="delete">cancel</a>
-                <h4>new page</h4> 
-                <a href="#home" data-icon="save">save</a>
+                <a href="#home" data-icon="home">home</a>
+                <h4>saving</h4>  
             </div>
             <div data-role="content">
                 <label for="name">what is your name:</label>
@@ -104,9 +92,8 @@
         
         <div data-role="page" id="listpage" data-theme="b">
             <div data-role="header">
-                <a href="#home" data-icon="delete">cancel</a>
-                <h4>new page</h4> 
-                <a href="#home" data-icon="save">save</a>
+                <a href="#home" data-icon="home">home</a>
+                <h4>list</h4>  
             </div>
             <div data-role="content"> 
                 <br/>
@@ -132,17 +119,18 @@
                 <h4>Dialog</h4> 
             </div>
             <div data-role="content">
-                 This is a dialog!
+                This is a dialog!
             </div> 
         </div>
 
-
         <script type="text/javascript" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" src="js/jquery-1.8.2.js"></script>  
-        <script type="text/javascript" src="js/index.js"></script>  
-        <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>  
+        <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script> 
+        <script type="text/javascript" src="js/index.js"></script>   
         <script type="text/javascript">
             app.initialize();
         </script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     </body>
 </html>
+
