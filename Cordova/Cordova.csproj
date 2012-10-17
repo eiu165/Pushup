@@ -170,6 +170,9 @@
     <Resource Include="www\css\images\icons-18-white.png" />
     <Resource Include="www\css\images\icons-36-black.png" />
     <Resource Include="www\css\images\icons-36-white.png" />
+    <Content Include="www\indexOld.html">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="www\css\jquery.mobile-1.2.0.css" />
     <Content Include="www\css\jquery.mobile.structure-1.2.0.css" />
     <Content Include="www\css\jquery.mobile.theme-1.2.0.css" />
