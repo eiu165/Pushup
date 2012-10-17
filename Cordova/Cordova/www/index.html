@@ -2,19 +2,18 @@
 <html>
   <head>
     <title>Capture Photo</title>
-     
-        <script type="text/javascript" src="cordova-2.1.0.js"></script>
 
+    <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
     <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source
         var destinationType; // sets the format of returned value 
 
-        // Wait for PhoneGap to connect with the device
+        // Wait for Cordova to connect with the device
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready to be used!
+        // Cordova is ready to be used!
         //
         function onDeviceReady() {
             pictureSource = navigator.camera.PictureSourceType;
@@ -65,14 +64,18 @@
         //
         function capturePhoto() {
             // Take picture using device camera and retrieve image as base64-encoded string
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+                destinationType: destinationType.DATA_URL
+            });
         }
 
         // A button will call this function
         //
         function capturePhotoEdit() {
             // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true });
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+                destinationType: destinationType.DATA_URL
+            });
         }
 
         // A button will call this function
@@ -94,10 +97,10 @@
     </script>
   </head>
   <body>
-      <button onclick="capturePhoto();" style="width: 400px; height: 200px;font-size: 16px;">Capture Photo</button> <br/>
-      <button onclick="capturePhotoEdit();" style="width: 400px; height: 200px;font-size: 16px;">Capture Editable Photo</button> <br/>
-      <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" style="width: 400px; height: 200px;font-size: 16px;">From Photo Library</button><br/>
-      <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" style="width: 400px; height: 200px;font-size: 16px;">From Photo Album</button><br/>
+    <button onclick="capturePhoto();">Capture Photo</button> <br>
+    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
   </body>
