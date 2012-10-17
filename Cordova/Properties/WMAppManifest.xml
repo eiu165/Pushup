@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{f6a106e0-f91d-4b2e-8701-662bae48b59a}" Title="Cordova" 
+  <App xmlns="" ProductID="{e58b404d-8b9f-470d-a968-596d0f62b6de}" Title="Cordova" 
        RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  
        Author="Cordova author" 
        BitsPerPixel="32" 
