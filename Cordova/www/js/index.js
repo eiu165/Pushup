@@ -65,7 +65,8 @@ var app = {
                 console.log('navigator.camera: ' + navigator.camera);
                 navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
             });
-        });
+        }); 
+        $('#Output').html('navigator.camera: ' + navigator.camera);
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
