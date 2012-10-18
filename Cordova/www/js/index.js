@@ -48,7 +48,7 @@ var app = {
 
 
 
-        message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
+       // message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
 //        $("#devicephonegap").html(device.phonegap);
 //        $("#deviceplatform").html(device.platform);
 //        $("#deviceuuid").html(device.uuid);
