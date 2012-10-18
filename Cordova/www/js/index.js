@@ -34,7 +34,18 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
+
+        $('#savebutton').click(function () {
+            window.localStorage.setItem("name", $('#name').val());
+        });
+        $('#newpage').live('pageshow', function () {
+            var personName = window.localStorage.getItem("name");
+            if (personName.length > 0) {
+                $('#name').val(personName);
+            }
+        });
     },
+
     // Update DOM on a Received Event
     receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
