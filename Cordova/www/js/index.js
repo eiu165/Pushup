@@ -47,8 +47,8 @@ var app = {
 
 
 
-        //var message = parentElement.querySelector('.message');
-       // message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
+        var message = parentElement.querySelector('.message');
+        message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
 //        $("#devicephonegap").html(device.phonegap);
 //        $("#deviceplatform").html(device.platform);
 //        $("#deviceuuid").html(device.uuid);
