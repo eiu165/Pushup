@@ -179,7 +179,6 @@
     <Content Include="www\js\jquery-1.8.2.js" />
     <Content Include="www\js\jquery.mobile-1.2.0.js" />
     <None Include="VERSION" />
-    <Resource Include="www\cordova-2.1.0.js" />
     <Resource Include="cordovalib\Images\appbar.back.rest.png" />
     <Resource Include="cordovalib\Images\appbar.close.rest.png" />
     <Resource Include="cordovalib\Images\appbar.feature.video.rest.png" />
