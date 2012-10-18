@@ -49,7 +49,7 @@ var app = {
 
         //var message = parentElement.querySelector('.message');
         //message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
-        $('.message').html(device.name + ' Device Name <br/>' + device.cordova + ' Cordova Version <br/>' + device.platform + 'Device Platform<br/>' + device.uuid + 'Device UUID<br/>' + device.version + 'Device Version');
+        $('.message').html(device.name + ' Device Name <br/>' + device.cordova + ' Cordova Version <br/>' + device.platform + ' Device Platform<br/>' + device.uuid + ' Device UUID<br/>' + device.version + ' Device Version');
 
 
 
