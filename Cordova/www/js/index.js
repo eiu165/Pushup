@@ -36,36 +36,8 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
 
-        console.log(' hello ');
+        console.log(' hello '); 
 
-        $('#savebutton').click(function () {
-            window.localStorage.setItem("name", $('#name').val());
-        });
-        $('#newpage').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            if (personName.length > 0) {
-                $('#name').val(personName);
-            }
-        });
-        $('#home').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            console.log(' the person name is :' + personName);
-            $('#nameLabel').text(personName);
-        });
-        $('#devicepage').live('pageshow', function () {
-            $("#devicename").html(device.name);
-            $("#devicephonegap").html(device.cordova);
-            $("#deviceplatform").html(device.platform);
-            $("#deviceuuid").html(device.uuid);
-            $("#deviceversion").html(device.version);
-        });
-
-        $('#camerapage').live('pageshow', function () {
-            $('#takepicture').click(function () {
-                console.log('navigator.camera: ' + navigator.camera);
-                navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
-            });
-        });
         $('#Output').html('navigator.camera: ' + navigator.camera);
     },
 
@@ -80,15 +52,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    },
-    onSuccess: function (fileUri) {
-        console.log('success onSuccess picture' + fileUri);
-        $('#imageuri').html(fileUri);
-    },
-    onError: function () {
-        console.log('error');
-    }
-
+    } 
 
 };
 
