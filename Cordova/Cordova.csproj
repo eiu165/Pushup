@@ -165,8 +165,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\notification-beep.wav" />
+    <Content Include="www\cordova-2.1.0.js" />
     <Content Include="www\img\logo.png" />
     <Content Include="www\js\index.js" />
+    <Content Include="www\js\jquery-1.8.2.js" />
     <None Include="VERSION" />
     <Resource Include="cordovalib\Images\appbar.back.rest.png" />
     <Resource Include="cordovalib\Images\appbar.close.rest.png" />
