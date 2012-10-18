@@ -44,6 +44,16 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
+
+
+        receivedElement.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
+//        $("#devicephonegap").html(device.phonegap);
+//        $("#deviceplatform").html(device.platform);
+//        $("#deviceuuid").html(device.uuid);
+//        $("#deviceversion").html(device.version);
+
+
+
         console.log('Received Event: ' + id);
     }
 };
