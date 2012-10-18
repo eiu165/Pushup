@@ -190,7 +190,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="BuildManifestProcessor.js" />
-    <Content Include="www\cordova-2.1.0.js" />
+    <None Include="www\cordova-2.1.0.js" />
     <Content Include="www\css\index.css" />
     <Content Include="www\index.html">
       <SubType>Designer</SubType>
