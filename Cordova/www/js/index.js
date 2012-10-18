@@ -44,6 +44,14 @@ var app = {
                 $('#name').val(personName);
             }
         });
+
+        $('#devicepage').live('pageshow', function () {
+            $("#devicename").html(device.name);
+            $("#devicephonegap").html(device.cordova);
+            $("#deviceplatform").html(device.platform);
+            $("#deviceuuid").html(device.uuid);
+            $("#deviceversion").html(device.version);
+        });
     },
 
     // Update DOM on a Received Event
