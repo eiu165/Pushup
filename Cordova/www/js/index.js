@@ -18,119 +18,32 @@
  */
 var app = {
     // Application Constructor
-    initialize: function () {
+    initialize: function() {
         this.bindEvents();
-
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // `load`, `deviceready`, `offline`, and `online`.
-    bindEvents: function () {
+    bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
-    onDeviceReady: function () {
+    onDeviceReady: function() {
         app.receivedEvent('deviceready');
-
-        console.log(' hello ');
-
-        $('#savebutton').click(function () {
-            window.localStorage.setItem("name", $('#name').val());
-        });
-        $('#newpage').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            if (personName.length > 0) {
-                $('#name').val(personName);
-            }
-        });
-        $('#home').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            console.log(' the person name is :' + personName);
-            $('#nameLabel').text(personName);
-        });
-        $('#devicepage').live('pageshow', function () {
-            $("#devicename").html(device.name);
-            $("#devicephonegap").html(device.cordova);
-            $("#deviceplatform").html(device.platform);
-            $("#deviceuuid").html(device.uuid);
-            $("#deviceversion").html(device.version);
-            $('#useragent').html(navigator.userAgent);
-        });
-
-        $('#camerapage').live('pageshow', function () {
-            $('#takepicture').click(function () {
-                console.log('navigator.camera: ' + navigator.camera);
-                navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
-            });
-        });
-        $('#Output').html('navigator.camera: ' + navigator.camera);
-
-        //map stuff
-        var center;
-        var map = null;
-
-        function Newinitialize(lat, lng) {
-            center = new google.maps.LatLng(lat, lng);
-            var myOptions = {
-                zoom: 18,
-                center: center,
-                mapTypeId: google.maps.MapTypeId.SATELLITE
-            }
-            map = new google.maps.Map(document.getElementById("map"), myOptions);
-            var marker = new google.maps.Marker({ position: center, map: map, title: 'You are here?' });
-        }
-
-        function detectBrowser() {
-            var useragent = navigator.userAgent;
-            var mapdivMap = document.getElementById("map");
-
-            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
-                mapdivMap.style.width = '100%';
-                mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
-            } else {
-                mapdivMap.style.width = '600px';
-                mapdivMap.style.height = '800px';
-            }
-        };
-
-        $('.goMap').live('click', function () {
-            console.log('navigator.geolocation: ' + navigator.geolocation);
-            if (navigator.geolocation) {
-                detectBrowser();
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    Newinitialize(position.coords.latitude, position.coords.longitude);
-                });
-            } else {
-                console.log('navigator.geolocation  not there ');
-                detectBrowser();
-                Newinitialize(52.636161, -1.133065);
-            }
-            console.log('about to hide button : ');
-            $('.goMap').hide();
-        });
-
-
-
-
     },
     // Update DOM on a Received Event
-    receivedEvent: function (id) {
-        $('.listening').css('display', 'none');
-        $('.received').css('display', 'block');
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
         console.log('Received Event: ' + id);
-    },
-    onSuccess: function (fileUri) {
-        console.log('success onSuccess picture' + fileUri);
-        $('#imageuri').html(fileUri);
-    },
-    onError: function () {
-        console.log('error');
     }
-
-
 };
-

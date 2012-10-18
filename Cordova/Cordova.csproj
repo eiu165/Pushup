@@ -23,7 +23,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4DBBF309-F914-4AB7-83A7-ECEDC6E8D40E}</ProjectGuid>
+    <ProjectGuid>{FA7BEACF-8B06-4528-B02D-174614667E1F}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -165,19 +165,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\notification-beep.wav" />
-    <Content Include="www\css\images\ajax-loader.gif" />
-    <Content Include="www\css\images\icons-18-black.png" />
-    <Content Include="www\css\images\icons-18-white.png" />
-    <Content Include="www\css\images\icons-36-black.png" />
-    <Content Include="www\css\images\icons-36-white.png" />
-    <Content Include="www\css\jquery.mobile-1.2.0.css" />
-    <Content Include="www\css\jquery.mobile.structure-1.2.0.css" />
-    <Content Include="www\css\jquery.mobile.theme-1.2.0.css" />
     <Content Include="www\img\logo.png" />
-    <Content Include="www\indexCamera.html" />
     <Content Include="www\js\index.js" />
-    <Content Include="www\js\jquery-1.8.2.js" />
-    <Content Include="www\js\jquery.mobile-1.2.0.js" />
     <None Include="VERSION" />
     <Resource Include="cordovalib\Images\appbar.back.rest.png" />
     <Resource Include="cordovalib\Images\appbar.close.rest.png" />
@@ -190,6 +179,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="BuildManifestProcessor.js" />
+    <Content Include="www\cordova-2.1.0.js" />
     <Content Include="www\css\index.css" />
     <Content Include="www\index.html">
       <SubType>Designer</SubType>
