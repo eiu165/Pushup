@@ -41,13 +41,13 @@ var app = {
         var listeningElement = parentElement.querySelector('.listening');
 
         var receivedElement = parentElement.querySelector('.received');
-        var message = parentElement.querySelector('.message');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
 
 
+        //var message = parentElement.querySelector('.message');
        // message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
 //        $("#devicephonegap").html(device.phonegap);
 //        $("#deviceplatform").html(device.platform);
