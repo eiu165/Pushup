@@ -19,12 +19,12 @@
 
 
 function onSuccess(fileUri) {
-    $('#imageuri').attr('src', fileUri);
+    $('#imageuri').html(fileUri);
+    $('#imagesrc').attr('src', fileUri);
 }
 function onError() {
     console.log('error');
 }
-
 
 var app = {
     // Application Constructor
