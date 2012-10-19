@@ -19,7 +19,7 @@
 
 
 function onSuccess(fileUri) {
-    $('#imageuri').html(fileUri);
+    $('#imageuri').attr('src', fileUri);
 }
 function onError() {
     console.log('error');
