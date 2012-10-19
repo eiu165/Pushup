@@ -41,40 +41,7 @@ var app = {
 
         //navigator.notification.alert("Your device: " + device.platform);
 
-        $('#savebutton').click(function () {
-            window.localStorage.setItem("name", $('#name').val());
-            $('#nameHome').show();
-        });
-
-        $('#newpage').live('pageshow', function () {
-
-            var personName = window.localStorage.getItem("name");
-            if (personName.length > 0) {
-                $('#name').val(personName);
-            }
-        });
-
         
-
-        $('#home').live('pageshow', function () {
-            var personName = window.localStorage.getItem("name");
-            console.log(' the person name is :' + personName);
-            //$('#nameLabel').text(personName);
-            if (personName.length > 0) {
-                $('#nameLabel').text(personName);
-            }
-        });
-
-
-        $('#devicepage').live('pageshow', function () {
-            $("#devicename").html(device.name);
-            $("#devicephonegap").html(device.cordova);
-            $("#deviceplatform").html(device.platform);
-            $("#deviceuuid").html(device.uuid);
-            $("#deviceversion").html(device.version);
-
-           // navigator.notification.alert("Your device: " + device.platform);
-        });
          
     }, //onDeviceReady
     
