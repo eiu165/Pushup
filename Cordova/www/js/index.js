@@ -78,6 +78,7 @@ var app = {
 //                navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
 //            });
 //        }); 
+
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
             $("#devicephonegap").html(device.cordova);
@@ -86,7 +87,8 @@ var app = {
             $("#deviceversion").html(device.version);
 
             navigator.notification.alert("Your device: " + device.platform);
-        }); 
+        });
+         
 //        $('.goMap').live('click', function () {
 //            console.log('navigator.geolocation: ' + navigator.geolocation);
 //            if (navigator.geolocation) {
