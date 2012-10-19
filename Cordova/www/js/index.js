@@ -40,7 +40,7 @@ var app = {
             $('#nameHome').show();
         });
         $('#clearbutton').click(function () {
-            window.localStorge.removeItem("name");
+            //window.localStorge.removeItem("name");
             $('#name').html('');
         }
         $('#newpage').live('pageshow', function () {
