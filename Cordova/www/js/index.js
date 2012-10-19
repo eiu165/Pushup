@@ -39,7 +39,7 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
 
-        navigator.notification.alert("Your device: " + device.platform);
+        //navigator.notification.alert("Your device: " + device.platform);
 
         $('#savebutton').click(function () {
             window.localStorage.setItem("name", $('#name').val());
@@ -86,7 +86,7 @@ var app = {
             $("#deviceuuid").html(device.uuid);
             $("#deviceversion").html(device.version);
 
-            navigator.notification.alert("Your device: " + device.platform);
+           // navigator.notification.alert("Your device: " + device.platform);
         });
          
 //        $('.goMap').live('click', function () {
