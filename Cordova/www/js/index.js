@@ -35,6 +35,8 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
 
+        navigator.notification.alert("Your device: " + device.platform);
+
         $('#savebutton').click(function () {
             window.localStorage.setItem("name", $('#name').val());
             $('#nameHome').show();
@@ -56,9 +58,7 @@ var app = {
             }
         });
 
-        $('#home').live('pageinit', function () {
-            navigator.notification.alert("Your device: " + device.platform); //only fires first time page is seen?
-        });
+        
 
         $('#home').live('pageshow', function () {
             var personName = window.localStorage.getItem("name");
