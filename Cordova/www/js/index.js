@@ -37,8 +37,12 @@ var app = {
 
         $('#savebutton').click(function () {
             window.localStorage.setItem("name", $('#name').val());
-            $('nameHome').show();
+            $('#nameHome').show();
         });
+        $('#clearbutton').click(function () {
+            window.localStorge.removeItem("name");
+            $('#name').html('');
+        }
         $('#newpage').live('pageshow', function () {
 
             var personName = window.localStorage.getItem("name");
