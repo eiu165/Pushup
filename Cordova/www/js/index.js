@@ -87,56 +87,56 @@ var app = {
 
             navigator.notification.alert("Your device: " + device.platform);
         }); 
-        $('.goMap').live('click', function () {
-            console.log('navigator.geolocation: ' + navigator.geolocation);
-            if (navigator.geolocation) {
-                app.detectBrowser();
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    app.Newinitialize(position.coords.latitude, position.coords.longitude);
-                });
-            } else {
-                console.log('navigator.geolocation  not there ');
-                app.detectBrowser();
-                app.Newinitialize(52.636161, -1.133065);
-            }
-            console.log('about to hide button : ');
-            $('.goMap').hide();
-        }); 
+//        $('.goMap').live('click', function () {
+//            console.log('navigator.geolocation: ' + navigator.geolocation);
+//            if (navigator.geolocation) {
+//                app.detectBrowser();
+//                navigator.geolocation.getCurrentPosition(function (position) {
+//                    app.Newinitialize(position.coords.latitude, position.coords.longitude);
+//                });
+//            } else {
+//                console.log('navigator.geolocation  not there ');
+//                app.detectBrowser();
+//                app.Newinitialize(52.636161, -1.133065);
+//            }
+//            console.log('about to hide button : ');
+//            $('.goMap').hide();
+//        }); 
     }, 
     
-    Newinitialize: function (lat, lng) {
-        var center = new google.maps.LatLng(lat, lng);
-        var myOptions = {
-            zoom: 18,
-            center: center,
-            mapTypeId: google.maps.MapTypeId.SATELLITE
-        }
-        var map = new google.maps.Map(document.getElementById("map"), myOptions);
-        var marker = new google.maps.Marker({ position: center, map: map, title: 'You are here?' });
-    },
+//    Newinitialize: function (lat, lng) {
+//        var center = new google.maps.LatLng(lat, lng);
+//        var myOptions = {
+//            zoom: 18,
+//            center: center,
+//            mapTypeId: google.maps.MapTypeId.SATELLITE
+//        }
+//        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+//        var marker = new google.maps.Marker({ position: center, map: map, title: 'You are here?' });
+//    },
 
-    detectBrowser: function () {
-        var useragent = navigator.userAgent;
-        var mapdivMap = document.getElementById("map");
+//    detectBrowser: function () {
+//        var useragent = navigator.userAgent;
+//        var mapdivMap = document.getElementById("map");
 
-        if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
-            mapdivMap.style.width = '100%';
-            mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
+//        if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
+//            mapdivMap.style.width = '100%';
+//            mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
 
-        } else {
-            mapdivMap.style.width = '600px';
-            mapdivMap.style.height = '800px';
-        }
-    },
-    
+//        } else {
+//            mapdivMap.style.width = '600px';
+//            mapdivMap.style.height = '800px';
+//        }
+//    },
+//    
 
-    onSuccess:function (fileUri) {
-        $('#imageuri').html(fileUri);
-        $('#imagesrc').attr('src', fileUri);
-    },
-    onError: function () {
-        console.log('error');
-    },
+//    onSuccess:function (fileUri) {
+//        $('#imageuri').html(fileUri);
+//        $('#imagesrc').attr('src', fileUri);
+//    },
+//    onError: function () {
+//        console.log('error');
+//    },
 
     // Update DOM on a Received Event
     receivedEvent: function (id) {
