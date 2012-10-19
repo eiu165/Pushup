@@ -73,20 +73,11 @@ var app = {
             }
         });
 
-        $('#camerapage').live('pageshow', function () {
-            $('#takepicture').click(function () { 
-                navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
-            });
-        });
-
-        function onSuccess(fileUri) {
-            $('#imageuri').html(fileUri);
-            $('#imagesrc').attr('src', fileUri);
-        }
-        function onError() {
-            console.log('error');
-        }
-
+//        $('#camerapage').live('pageshow', function () {
+//            $('#takepicture').click(function () { 
+//                navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+//            });
+//        }); 
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
             $("#devicephonegap").html(device.cordova);
@@ -95,53 +86,56 @@ var app = {
             $("#deviceversion").html(device.version);
 
             navigator.notification.alert("Your device: " + device.platform);
-        });
+        }); 
+//        $('.goMap').live('click', function () {
+//            console.log('navigator.geolocation: ' + navigator.geolocation);
+//            if (navigator.geolocation) {
+//                app.detectBrowser();
+//                navigator.geolocation.getCurrentPosition(function (position) {
+//                    app.Newinitialize(position.coords.latitude, position.coords.longitude);
+//                });
+//            } else {
+//                console.log('navigator.geolocation  not there ');
+//                app.detectBrowser();
+//                app.Newinitialize(52.636161, -1.133065);
+//            }
+//            console.log('about to hide button : ');
+//            $('.goMap').hide();
+//        }); 
+    }, 
+    
+//    Newinitialize: function (lat, lng) {
+//        var center = new google.maps.LatLng(lat, lng);
+//        var myOptions = {
+//            zoom: 18,
+//            center: center,
+//            mapTypeId: google.maps.MapTypeId.SATELLITE
+//        }
+//        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+//        var marker = new google.maps.Marker({ position: center, map: map, title: 'You are here?' });
+//    },
 
-        //map stuff
-        var center;
-        var map = null;
+//    detectBrowser: function () {
+//        var useragent = navigator.userAgent;
+//        var mapdivMap = document.getElementById("map");
 
-        function Newinitialize(lat, lng) {
-            center = new google.maps.LatLng(lat, lng);
-            var myOptions = {
-                zoom: 18,
-                center: center,
-                mapTypeId: google.maps.MapTypeId.SATELLITE
-            }
-            map = new google.maps.Map(document.getElementById("map"), myOptions);
-            var marker = new google.maps.Marker({ position: center, map: map, title: 'You are here?' });
-        }
+//        if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
+//            mapdivMap.style.width = '100%';
+//            mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
 
-        function detectBrowser() {
-            var useragent = navigator.userAgent;
-            var mapdivMap = document.getElementById("map");
+//        } else {
+//            mapdivMap.style.width = '600px';
+//            mapdivMap.style.height = '800px';
+//        }
+//    },
+    
 
-            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
-                mapdivMap.style.width = '100%';
-                mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
-
-            } else {
-                mapdivMap.style.width = '600px';
-                mapdivMap.style.height = '800px';
-            }
-        };
-
-        $('.goMap').live('click', function () {
-            console.log('navigator.geolocation: ' + navigator.geolocation);
-            if (navigator.geolocation) {
-                detectBrowser();
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    Newinitialize(position.coords.latitude, position.coords.longitude);
-                });
-            } else {
-                console.log('navigator.geolocation  not there ');
-                detectBrowser();
-                Newinitialize(52.636161, -1.133065);
-            }
-            console.log('about to hide button : ');
-            $('.goMap').hide();
-        });
-
+    onSuccess:function (fileUri) {
+        $('#imageuri').html(fileUri);
+        $('#imagesrc').attr('src', fileUri);
+    },
+    onError: function () {
+        console.log('error');
     },
 
     // Update DOM on a Received Event
