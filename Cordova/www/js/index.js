@@ -40,7 +40,7 @@ var app = {
             $('#nameHome').show();
         });
         $('#clearbutton').click(function () {
-            //window.localStorage.removeItem("name");
+            //window.localStorage.removeItem("name");  this seems to break functions on page
             window.localStorage.setItem("name", "");
             $('#name').val('');
             $('#nameHome').hide();
