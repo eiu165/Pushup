@@ -39,14 +39,14 @@ var app = {
             window.localStorage.setItem("name", $('#name').val());
             $('#nameHome').show();
         });
-//        $('#clearbutton').click(function () {
-//            console.log('aaaaaaaaaaaaaa');
-//            //window.localStorage.removeItem("name");  //this seems to break functions on page
-//            window.localStorage.setItem("name", ""); //this is breaking too. home button freezes
-//            window.localStorage.clear();
-//            $('#name').val('');
-//            $('#nameHome').hide();
-//        });
+        //        $('#clearbutton').click(function () {
+        //            console.log('aaaaaaaaaaaaaa');
+        //            //window.localStorage.removeItem("name");  //this seems to break functions on page
+        //            window.localStorage.setItem("name", ""); //this is breaking too. home button freezes
+        //            window.localStorage.clear();
+        //            $('#name').val('');
+        //            $('#nameHome').hide();
+        //        });
 
         $('#newpage').live('pageshow', function () {
 
@@ -63,6 +63,7 @@ var app = {
             if (personName.length > 0) {
                 $('#nameLabel').text(personName);
             }
+            navigator.notification.alert("Your device: " + device.platform);
         });
 
         $('#devicepage').live('pageshow', function () {
@@ -95,7 +96,7 @@ var app = {
             if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
                 mapdivMap.style.width = '100%';
                 mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
-                        
+
             } else {
                 mapdivMap.style.width = '600px';
                 mapdivMap.style.height = '800px';
