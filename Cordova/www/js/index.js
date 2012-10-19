@@ -41,7 +41,7 @@ var app = {
         });
         $('#clearbutton').click(function () {
             //window.localStorge.removeItem("name");
-            $('#name').html('');
+            $('#name').val('');
         });
         $('#newpage').live('pageshow', function () {
 
