@@ -39,13 +39,14 @@ var app = {
             window.localStorage.setItem("name", $('#name').val());
             $('#nameHome').show();
         });
-        $('#clearbutton').click(function () {
-            //window.localStorage.removeItem("name");  this seems to break functions on page
-            //window.localStorage.setItem("name", ""); this is breaking too. home button freezes
-            window.localStorage.clear();
-            $('#name').val('');
-            $('#nameHome').hide();
-        });
+//        $('#clearbutton').click(function () {
+//            //window.localStorage.removeItem("name");  this seems to break functions on page
+//            //window.localStorage.setItem("name", ""); this is breaking too. home button freezes
+//            window.localStorage.clear();
+//            $('#name').val('');
+//            $('#nameHome').hide();
+        //        });
+
         $('#newpage').live('pageshow', function () {
 
             var personName = window.localStorage.getItem("name");
