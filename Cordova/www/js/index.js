@@ -92,9 +92,10 @@ var app = {
             var useragent = navigator.userAgent;
             var mapdivMap = document.getElementById("map");
 
-            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
+            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 ) {
                 mapdivMap.style.width = '100%';
                 mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
+                        
             } else {
                 mapdivMap.style.width = '600px';
                 mapdivMap.style.height = '800px';
