@@ -56,6 +56,10 @@ var app = {
             }
         });
 
+        $('#home').live('pageinit', function () {
+            navigator.notification.alert("Your device: " + device.platform); //only fires first time page is seen?
+        });
+
         $('#home').live('pageshow', function () {
             var personName = window.localStorage.getItem("name");
             console.log(' the person name is :' + personName);
@@ -63,7 +67,6 @@ var app = {
             if (personName.length > 0) {
                 $('#nameLabel').text(personName);
             }
-            navigator.notification.alert("Your device: " + device.platform);
         });
 
         $('#devicepage').live('pageshow', function () {
@@ -72,6 +75,8 @@ var app = {
             $("#deviceplatform").html(device.platform);
             $("#deviceuuid").html(device.uuid);
             $("#deviceversion").html(device.version);
+
+            navigator.notification.alert("Your device: " + device.platform);
         });
 
         //map stuff
