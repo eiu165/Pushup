@@ -45,6 +45,12 @@ var app = {
             }
         });
 
+        $('#home').live('pageshow', function () {
+            var personName = window.localStorage.getItem("name");
+            console.log(' the person name is :' + personName);
+            $('#nameLabel').text(personName);
+        });
+
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
             $("#devicephonegap").html(device.cordova);
