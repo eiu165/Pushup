@@ -18,13 +18,7 @@
  */
 
 
-function onSuccess(fileUri) {
-    $('#imageuri').html(fileUri);
-    $('#imagesrc').attr('src', fileUri);
-}
-function onError() {
-    console.log('error');
-}
+
 
 var app = {
     // Application Constructor
@@ -84,6 +78,14 @@ var app = {
                 navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
             });
         });
+
+        function onSuccess(fileUri) {
+            $('#imageuri').html(fileUri);
+            $('#imagesrc').attr('src', fileUri);
+        }
+        function onError() {
+            console.log('error');
+        }
 
         $('#devicepage').live('pageshow', function () {
             $("#devicename").html(device.name);
