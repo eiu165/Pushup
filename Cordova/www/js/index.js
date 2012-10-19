@@ -39,6 +39,7 @@ var app = {
             window.localStorage.setItem("name", $('#name').val());
         });
         $('#newpage').live('pageshow', function () {
+            $('#name').focus();
             var personName = window.localStorage.getItem("name");
             if (personName.length > 0) {
                 $('#name').val(personName);
