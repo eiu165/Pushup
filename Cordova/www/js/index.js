@@ -92,7 +92,7 @@ var app = {
             var useragent = navigator.userAgent;
             var mapdivMap = document.getElementById("map");
 
-            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 ) {
+            if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
                 mapdivMap.style.width = '100%';
                 mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
                         
@@ -105,13 +105,13 @@ var app = {
         $('.goMap').live('click', function () {
             console.log('navigator.geolocation: ' + navigator.geolocation);
             if (navigator.geolocation) {
-                //detectBrowser();
+                detectBrowser();
                 navigator.geolocation.getCurrentPosition(function (position) {
                     Newinitialize(position.coords.latitude, position.coords.longitude);
                 });
             } else {
                 console.log('navigator.geolocation  not there ');
-                //detectBrowser();
+                detectBrowser();
                 Newinitialize(52.636161, -1.133065);
             }
             console.log('about to hide button : ');
