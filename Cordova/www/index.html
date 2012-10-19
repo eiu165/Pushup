@@ -17,10 +17,11 @@
                 <p class="event listening blink">Connecting to Device</p>
                 <p class="event received">Device is Ready <label id="nameLabel"></label></p>
                 <p class="message">1111111111</p>
-                <a href="#newpage" data-role="button" >saving</a>
-                <a href="#devicepage" data-role="button" >device info</a>
-                <a href="#listpage" data-role="button" >list page</a>
-                <a href="#location" data-role="button">location</a>
+                <a href="#newpage" data-role="button" data-inline="true">saving</a>
+                <a href="#devicepage" data-role="button" data-inline="true" >device info</a>
+                <a href="#listpage" data-role="button" data-inline="true" >list page</a>
+                <a href="#location" data-role="button" data-inline="true">location</a>                    
+                <a href="#camerapage" data-role="button" >camera</a>
             </div>
         </div>
 
@@ -40,6 +41,19 @@
                 <h4>footer</h4>
             </div>
         </div>
+
+        <div data-role="page" id="camerapage" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="home">home</a>
+                <h4>camera page</h4>
+            </div>
+            <div data-role="content"> 
+                    <a id="takepicture" data-role="button" >take picture</a>
+                    <p id="imageuri"></p>
+            </div>
+        </div>
+
+
 
         <div data-role="page" id="devicepage" data-theme="b">
             <div data-role="header">

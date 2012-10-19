@@ -16,6 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+
+function onSuccess(fileUri) {
+    $('#imageuri').html(fileUri);
+}
+function onError() {
+    console.log('error');
+}
+
+
 var app = {
     // Application Constructor
     initialize: function () {
@@ -67,6 +77,12 @@ var app = {
             if (personName.length > 0) {
                 $('#nameLabel').text(personName);
             }
+        });
+
+        $('#camerapage').live('pageshow', function () {
+            $('#takepicture').click(function () { 
+                navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+            });
         });
 
         $('#devicepage').live('pageshow', function () {
