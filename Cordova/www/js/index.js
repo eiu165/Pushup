@@ -41,6 +41,16 @@ var app = {
 
         //navigator.notification.alert("Your device: " + device.platform);
 
+        $('#devicepage').live('pageshow', function () {
+            $("#devicename").html(device.name);
+            $("#devicephonegap").html(device.cordova);
+            $("#deviceplatform").html(device.platform);
+            $("#deviceuuid").html(device.uuid);
+            $("#deviceversion").html(device.version);
+
+            navigator.notification.alert("Your device: " + device.platform);
+        }); 
+
         $('.goMap').live('click', function () {
             console.log('navigator.geolocation: ' + navigator.geolocation);
             if (navigator.geolocation) {
