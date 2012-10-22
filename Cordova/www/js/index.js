@@ -167,10 +167,10 @@ var app = {
     },
 
     acceleratorSuccess: function (a) {
-        $('#aX').html('X-axis' + a.x);
-        $('#aY').html('Y-axis' + a.y);
-        $('#aZ').html('Z-axis' + a.z);
-        $('#aTime').html('Timestamp' + a.timestamp);
+        $('#aX').html('X-axis : ' + (a.x).toFixed(2));
+        $('#aY').html('Y-axis : ' + (a.y).toFixed(2));
+        $('#aZ').html('Z-axis : ' + (a.z).toFixed(2));
+        $('#aTime').html('Timestamp : ' + (a.timestamp).toFixed(2));
     },
 
     acceleratorError: function () { },
