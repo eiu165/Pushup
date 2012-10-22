@@ -115,3 +115,5 @@ h1 {
 }
 
 .cameraImage {margin:40px auto;}
+
+#ball {width:20px;height:20px;border-radius:10px;webkit-radius:10px;background-color:Red; position:absolute;top:0px;left:0px;}
