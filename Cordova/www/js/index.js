@@ -66,6 +66,12 @@ var app = {
             console.log('about to hide button : ');
             $('.goMap').hide();
         });
+
+        $('#camerapage').live('pageshow', function () {
+            $('#takepicture').click(function () { 
+                navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+            });
+        });
          
     }, //onDeviceReady
 
@@ -92,6 +98,14 @@ var app = {
                 mapdivMap.style.width = '600px';
                 mapdivMap.style.height = '800px';
             }
+        },
+
+        onSuccess: function (fileUri) {
+            $('#imageuri').html(fileUri);
+            $('#imagesrc').attr('src', fileUri);
+        },
+        onError: function () {
+            console.log('error');
         },
 
     // Update DOM on a Received Event
