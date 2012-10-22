@@ -70,7 +70,7 @@ var app = {
         $('#camerapage').live('pageshow', function () {
             $('#takepicture').click(function () {
                 navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, saveToPhotoAlbum: true });
-                navigator.device.capture.captureImage(app.captureSuccess, app.captureError, { limit: 1 });
+//                navigator.device.capture.captureImage(app.captureSuccess, app.captureError, { limit: 1 });
             });
         });
 
@@ -108,11 +108,11 @@ var app = {
     onError: function () {
         console.log('error');
     },
-    captureSuccess: function (imageURI) {
-    },
-    captureError: function (error) {
-        console.log('error capture');
-    },
+//    captureSuccess: function (imageURI) {
+//    },
+//    captureError: function (error) {
+//        console.log('error capture');
+//    },
 
     // Update DOM on a Received Event
     receivedEvent: function (id) {
