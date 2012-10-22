@@ -70,7 +70,7 @@ var app = {
         $('#camerapage').live('pageshow', function () {
             $('#takepicture').click(function () {
                 navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
-                navigator.capture.captureImage(app.captureSuccess, app.captureError, { limit: 1 });
+                navigator.device.capture.captureImage(app.captureSuccess, app.captureError, { limit: 1 });
             });
         });
 
