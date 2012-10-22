@@ -22,6 +22,7 @@
                 <a href="#listpage" data-role="button" data-inline="true" >list page</a><br />
                 <a href="#location" data-role="button" data-inline="true">location</a>  <br />
                 <a href="#camerapage" data-role="button" data-inline="true" >camera</a>
+                <a href="#accelerometer" data-role="button" data-inline="true" >accelerometer</a>
             </div>
         </div>
 
@@ -107,7 +108,24 @@
             <div data-role="content"> 
                 <a id="takepicture" data-role="button" >take picture</a>
                 <p id="imageuri"></p>
-                <img src="css/images/ajax-loader.gif" id="imagesrc" height="400"  width="300" alt="aaa" />
+                <img src="css/images/ajax-loader.gif" id="imagesrc" height="400"  width="300" alt="aaa" class="cameraImage" />
+            </div>
+        </div>
+
+        <div data-role="page" id="accelerometer" data-theme="b">
+            <div data-role="header">
+                <a href="#home" data-icon="home">home</a>
+                <h4>new page</h4>  
+            </div>
+            <div data-role="content"> 
+                <br/>
+                <p id="aX"></p>
+                <p id="aY"></p>
+                <p id="aZ"></p>
+                <p id="aTime"></p>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>footer</h4> 
             </div>
         </div>
         

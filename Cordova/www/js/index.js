@@ -70,8 +70,12 @@ var app = {
         $('#camerapage').live('pageshow', function () {
             $('#takepicture').click(function () {
                 navigator.camera.getPicture(app.onSuccess, app.onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, saveToPhotoAlbum: true });
-//                navigator.device.capture.captureImage(app.captureSuccess, app.captureError, { limit: 1 });
+                //                navigator.device.capture.captureImage(app.captureSuccess, app.captureError, { limit: 1 });
             });
+        });
+
+        $('accelerometer').live('pageshow', function () {
+            var wId = navigator.accelerometer.watchAcceleration(acceleratorSuccess, acceleratorError, { frequency: 1000 });
         });
 
     }, //onDeviceReady
@@ -108,11 +112,21 @@ var app = {
     onError: function () {
         console.log('error');
     },
-//    captureSuccess: function (imageURI) {
-//    },
-//    captureError: function (error) {
-//        console.log('error capture');
-//    },
+
+    acceleratorSuccess: function (a) {
+        $('#aX').html(a.x);
+        $('#aY').html(a.x);
+        $('#aZ').html(a.x);
+        $('#aTime').html(a.timestamp);
+    },
+
+    acceleratorError: function () { },
+
+    //    captureSuccess: function (imageURI) {
+    //    },
+    //    captureError: function (error) {
+    //        console.log('error capture');
+    //    },
 
     // Update DOM on a Received Event
     receivedEvent: function (id) {
