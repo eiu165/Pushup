@@ -83,17 +83,11 @@ var app = {
             If you are going to blog or tweet about it or if you are going to create a better
             code, please mantain the link to www.mobilexweb.com or @firt in Twitter.
             */
-
-            // Position Variables
-            var x = 0;
+            var x = 0;// Position Variables
             var y = 0;
-
-            // Speed - Velocity
-            var vx = 0;
+            var vx = 0;// Speed - Velocity
             var vy = 0;
-
-            // Acceleration
-            var ax = 0;
+            var ax = 0;// Acceleration
             var ay = 0;
 
             var delay = 10;
@@ -126,7 +120,7 @@ var app = {
                     ball.style.top = y + "px";
                     ball.style.left = x + "px";
                 }, delay);
-            } //end mobilexweb.com code
+            //} //end mobilexweb.com code
 
 
         });
