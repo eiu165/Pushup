@@ -75,7 +75,7 @@ var app = {
         });
 
         $('#accelerometer').live('pageshow', function () {
-            var wId = navigator.accelerometer.watchAcceleration(acceleratorSuccess, acceleratorError, { frequency: 1000 });
+            var wId = navigator.accelerometer.watchAcceleration(app.acceleratorSuccess, app.acceleratorError, { frequency: 1000 });
         });
 
     }, //onDeviceReady
