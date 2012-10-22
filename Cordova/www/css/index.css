@@ -117,4 +117,4 @@ h1 {
 .cameraImage {margin:40px auto;}
 
 #no {display:none;}
-#ball {width:20px;height:20px;border-radius:10px;webkit-radius:10px;background-color:Red; position:absolute;top:0px;left:0px;}
+#ball {width:100px;height:100px;border-radius:50px;webkit-radius:50px;background-color:Red; position:absolute;top:0px;left:0px;}
