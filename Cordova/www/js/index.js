@@ -99,11 +99,11 @@ var app = {
             var delay = 10;
             var vMultiplier = 0.01;
 
-            if (window.DeviceMotionEvent !== undefined) {
-                document.getElementById("no").style.display = "block";
-                document.getElementById("yes").style.display = "none";
+//            if (window.DeviceMotionEvent == undefined) {
+//                document.getElementById("no").style.display = "block";
+//                document.getElementById("yes").style.display = "none";
 
-            } else {
+//            } else {
                 window.ondevicemotion = function (event) {
                     ax = event.accelerationIncludingGravity.x;
                     ay = event.accelerationIncludingGravity.y;
