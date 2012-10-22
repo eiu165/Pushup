@@ -74,7 +74,7 @@ var app = {
             });
         });
 
-        $('accelerometer').live('pageshow', function () {
+        $('#accelerometer').live('pageshow', function () {
             var wId = navigator.accelerometer.watchAcceleration(acceleratorSuccess, acceleratorError, { frequency: 1000 });
         });
 
@@ -114,10 +114,10 @@ var app = {
     },
 
     acceleratorSuccess: function (a) {
-        $('#aX').html(a.x);
-        $('#aY').html(a.x);
-        $('#aZ').html(a.x);
-        $('#aTime').html(a.timestamp);
+        $('#aX').html('X-axis' + a.x);
+        $('#aY').html('Y-axis' + a.y);
+        $('#aZ').html('Z-axis' + a.z);
+        $('#aTime').html('Timestamp' + a.timestamp);
     },
 
     acceleratorError: function () { },
