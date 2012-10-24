@@ -22,13 +22,13 @@
 
 var app = {
     // Application Constructor
-//    initialize: function () {
-//        this.bindEvents();
-//        },
-
-    onLoad: function () {
+    initialize: function () {
         this.bindEvents();
         },
+
+//    onLoad: function () {
+//        this.bindEvents();
+//        },
 
     // Bind Event Listeners
     //
