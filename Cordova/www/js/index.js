@@ -149,9 +149,9 @@ var app = {
         useragent = useragent.toLowerCase();
 
         if (useragent.indexOf('iphone') != -1 || useragent.indexOf('android') != -1 || useragent.indexOf('windows phone') != -1 || useragent.indexOf('ipad') != -1) {
-            mapdivMap.style.width = '100%';
-            //mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
-            mapdivMap.style.height = '100%';
+            //mapdivMap.style.width = '100%';
+            mapdivMap.style.width = (window.innerWidth) + "px";
+            mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator or devices
 
         } else {
             mapdivMap.style.width = '600px';
