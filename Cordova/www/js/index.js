@@ -149,10 +149,10 @@ var app = {
         useragent = useragent.toLowerCase();
 
         if (useragent.indexOf('iphone') != -1 || useragent.indexOf('windows phone') != -1 || useragent.indexOf('ipad') != -1 || useragent.indexOf('android') != -1) {
-            mapdivMap.style.width = '100%';
-           // mapdivMap.style.width = (window.innerWidth) + "px"; // this still doesn't work in android
-            //mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator or devices
-            mapdivMap.style.height = (window.screen.availHeight) + "px";
+            //mapdivMap.style.width = '100%';
+            mapdivMap.style.width = (window.screen.availWidth) + "px"; // this still doesn't work in android
+            mapdivMap.style.height = (window.screen.availHeight) + "px";  //height = 100% didnt work in emulator or devices
+           // mapdivMap.style.height = (window.screen.availHeight) + "px";
 //        } else if (useragent.indexOf('android') != -1) {  //having trouble getting map to work on android
 //            mapdivMap.style.height = (screen.height) + "px";
 //            mapdivMap.style.width = (screen.width) + "px";
