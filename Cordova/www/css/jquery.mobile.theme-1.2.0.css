@@ -11,12 +11,12 @@
 
 /* Swatches */
 
-/* Z ------------------------------------------------------------------------------------------------------*/
+/* G  Custom Theme ------------------------------------------------------------------------------------------------------*/
 
 .ui-body-g {background:url(../css/images/bgPattern.gif) repeat;}
 
 .ui-bar-g {
-	border: 1px solid 		#333 /*{a-bar-border}*/;
+	/*border: 1px solid 		#333 *//*{a-bar-border}*/;
 	background: 			#111 /*{a-bar-background-color}*/;
 	color: 					#fff /*{a-bar-color}*/;
 	font-weight: bold;
@@ -58,7 +58,7 @@
 
 /*.ui-body-g,*/
 .ui-overlay-g {
-	border: 1px solid 		#444 /*{a-body-border}*/;
+	/*border: 1px solid 		#444 *//*{a-body-border}*/;
 	background: 			#222 /*{a-body-background-color}*/;
 	color: 					#fff /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 1px /*{a-body-shadow-radius}*/ #111 /*{a-body-shadow-color}*/;
@@ -103,7 +103,7 @@
 }
 
 .ui-btn-up-g {
-	border: 1px solid 		#111 /*{a-bup-border}*/;
+	/*border: 1px solid 		#111 */ /*{a-bup-border}*/;
 	background: 			#333 /*{a-bup-background-color}*/;
 	/*font-weight: bold;*/
 	font-size:20px;
@@ -121,7 +121,7 @@
 	color: 					#fff /*{a-bup-color}*/;
 }
 .ui-btn-hover-g {
-	border: 1px solid 		#000 /*{a-bhover-border}*/;
+	/*border: 1px solid 		#000 *//*{a-bhover-border}*/;
 	background: 			#444 /*{a-bhover-background-color}*/;
 	/*font-weight: bold;*/
 	font-size:20px;
@@ -140,7 +140,7 @@
 	color: 					#fff /*{a-bhover-color}*/;
 }
 .ui-btn-down-g {
-	border: 1px solid 		#000 /*{a-bdown-border}*/;
+	/*border: 1px solid 		#000 *//*{a-bdown-border}*/;
 	background: 			#222 /*{a-bdown-background-color}*/;
 	/*font-weight: bold;*/
 	font-size:20px;
