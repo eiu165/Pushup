@@ -24,11 +24,11 @@ var app = {
     // Application Constructor
     initialize: function () {
         this.bindEvents();
-        },
+    },
 
-//    onLoad: function () {
-//        this.bindEvents();
-//        },
+    //    onLoad: function () {
+    //        this.bindEvents();
+    //        },
 
     // Bind Event Listeners
     //
@@ -88,11 +88,11 @@ var app = {
             If you are going to blog or tweet about it or if you are going to create a better
             code, please mantain the link to www.mobilexweb.com or @firt in Twitter.
             */
-            var x = 300;// Position Variables
+            var x = 300; // Position Variables
             var y = 0;
-            var vx = 0;// Speed - Velocity
+            var vx = 0; // Speed - Velocity
             var vy = 0;
-            var ax = 0;// Acceleration
+            var ax = 0; // Acceleration
             var ay = 0;
 
             var delay = 10;
@@ -146,8 +146,9 @@ var app = {
     detectBrowser: function () {
         var useragent = navigator.userAgent;
         var mapdivMap = document.getElementById("map");
+        useragent = useragent.toLowerCase();
 
-        if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 || useragent.indexOf('Windows Phone') != -1 || useragent.indexOf('iPad') != -1) {
+        if (useragent.indexOf('iphone') != -1 || useragent.indexOf('android') != -1 || useragent.indexOf('windows phone') != -1 || useragent.indexOf('ipad') != -1) {
             mapdivMap.style.width = '100%';
             mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator
 

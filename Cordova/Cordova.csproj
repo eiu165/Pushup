@@ -165,7 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\notification-beep.wav" />
-    <Content Include="www\cordova-2.1.0.js" />
     <Content Include="www\css\images\ajax-loader.gif" />
     <Content Include="www\css\images\icons-18-black.png" />
     <Content Include="www\css\images\icons-18-white.png" />
