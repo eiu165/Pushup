@@ -148,11 +148,13 @@ var app = {
         var mapdivMap = document.getElementById("map");
         useragent = useragent.toLowerCase();
 
-        if (useragent.indexOf('iphone') != -1 || useragent.indexOf('android') != -1 || useragent.indexOf('windows phone') != -1 || useragent.indexOf('ipad') != -1) {
-            //mapdivMap.style.width = '100%';
-            mapdivMap.style.width = (window.innerWidth) + "px";
+        if (useragent.indexOf('iphone') != -1 || useragent.indexOf('windows phone') != -1 || useragent.indexOf('ipad') != -1) {
+            mapdivMap.style.width = '100%';
+           // mapdivMap.style.width = (window.innerWidth) + "px"; // this still doesn't work in android
             mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator or devices
-
+        } else if (useragent.indexOf('android') != -1) {
+            mapdivMap.style.height = (screen.height);
+            mapdivMap.style.width = (screen.width);
         } else {
             mapdivMap.style.width = '600px';
             mapdivMap.style.height = '800px';
