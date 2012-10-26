@@ -21,19 +21,21 @@
             app.initialize();
         </script>
     </head>
-    <body>
-        <div class="app" data-role="page" id="home" data-theme="b">
+    <body data-theme="g">
+        <div class="app" data-role="page" id="home" data-theme="g">
             <h1>Apache Cordova</h1>
             <div id="deviceready" >
                 <p class="event listening blink">Connecting to Device</p>
                 <p class="event received">Device is Ready <label id="nameLabel"></label></p>
                 <p class="message">1111111111222</p>
-                <a href="#newpage" data-role="button" data-inline="true">saving</a><br />
-                <a href="#devicepage" data-role="button" data-inline="true" >device info</a><br />
-                <a href="#listpage" data-role="button" data-inline="true" >list page</a><br />
-                <a href="#location" data-role="button" data-inline="true">location</a>  <br />
-                <a href="#camerapage" data-role="button" data-inline="true" >camera</a><br />
-                <a href="#accelerometer" data-role="button" data-inline="true" >accelerometer</a>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#newpage" data-transition="flip" >Saving</a></li>
+                    <li><a href="#devicepage" data-transition="flip">Device Info</a></li>
+                    <li><a href="#listpage" data-transition="flip">List Page</a></li>
+                    <li><a href="#location" data-transition="flip">Location</a> </li> 
+                    <li><a href="#camerapage" data-transition="flip">Camera</a></li>
+                    <li><a href="#accelerometer" data-transition="flip">Accelerometer</a></li>
+                </ul>
             </div>
         </div>
 
