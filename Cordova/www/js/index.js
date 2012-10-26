@@ -153,8 +153,8 @@ var app = {
            // mapdivMap.style.width = (window.innerWidth) + "px"; // this still doesn't work in android
             mapdivMap.style.height = (window.innerHeight) + "px";  //height = 100% didnt work in emulator or devices
         } else if (useragent.indexOf('android') != -1) {
-            mapdivMap.style.height = (screen.height);
-            mapdivMap.style.width = (screen.width);
+            mapdivMap.style.height = (screen.height) + "px";
+            mapdivMap.style.width = (screen.width) + "px";
         } else {
             mapdivMap.style.width = '600px';
             mapdivMap.style.height = '800px';
