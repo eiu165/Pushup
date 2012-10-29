@@ -127,6 +127,11 @@ var app = {
                 }, delay);
             } //end mobilexweb.com code
 
+        });
+
+        $('.slidePage').live('swiperight', function () {
+            var nextslide = $(this).next('p');
+            if (nextslide.length > 0) 
 
         });
 
@@ -152,10 +157,10 @@ var app = {
             //mapdivMap.style.width = '100%';
             mapdivMap.style.width = (window.screen.availWidth) + "px"; // this still doesn't work in android
             mapdivMap.style.height = (window.screen.availHeight) + "px";  //height = 100% didnt work in emulator or devices
-           // mapdivMap.style.height = (window.screen.availHeight) + "px";
-//        } else if (useragent.indexOf('android') != -1) {  //having trouble getting map to work on android
-//            mapdivMap.style.height = (screen.height) + "px";
-//            mapdivMap.style.width = (screen.width) + "px";
+            // mapdivMap.style.height = (window.screen.availHeight) + "px";
+            //        } else if (useragent.indexOf('android') != -1) {  //having trouble getting map to work on android
+            //            mapdivMap.style.height = (screen.height) + "px";
+            //            mapdivMap.style.width = (screen.width) + "px";
         } else {
             mapdivMap.style.width = '600px';
             mapdivMap.style.height = '800px';
