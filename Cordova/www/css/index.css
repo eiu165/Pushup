@@ -117,8 +117,14 @@ h1 {
 .cameraImage {margin:40px auto;}
 
 #no {display:none;}
-#ball {width:100px;height:100px;border-radius:50px;webkit-radius:50px;background-color:Red; position:absolute;top:0px;left:0px;}
+#ball {width:100px;height:100px;border-radius:50px;-webkit-radius:50px;background-color:Red; position:absolute;top:0px;left:0px;}
 .ui-mobile body {background:url(../css/images/bgPattern.gif) repeat ;}
 #deviceready {width:70%;margin:0 auto;}
 .ui-li-heading h3 {padding-left:100px;font-size:20px;}
 .ui-li-heading p {padding-left:100px; font-size:16px;}
+
+.cycle-slideshow {margin:40px auto 0px auto;width:50%;height:300px;overflow:hidden;box-shadow:0 0 16px #fff;-webkit-box-shadow:0 0 16px #fff;-mox-box-shadow:0 0 16px #fff;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}
+.cycle-slide {height:300px;padding:20px;font-size:16px;display:none;margin:0px;}
+.cycle-pager {text-align:center; top:10px; width:100%;}
+.cycle-pager span {color:#ddd;cursor:pointer;display:inline-block;font-size:50px;width:16px;height:16px;}
+.cycle-pager span.cycle-pager-active {color:#d69746;}
