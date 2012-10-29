@@ -120,3 +120,5 @@ h1 {
 #ball {width:100px;height:100px;border-radius:50px;webkit-radius:50px;background-color:Red; position:absolute;top:0px;left:0px;}
 .ui-mobile body {background:url(../css/images/bgPattern.gif) repeat ;}
 #deviceready {width:70%;margin:0 auto;}
+.ui-li-heading h3 {padding-left:100px;font-size:20px;}
+.ui-li-heading p {padding-left:100px; font-size:16px;}

@@ -167,10 +167,16 @@
     <Content Include="resources\notification-beep.wav" />
     <Content Include="www\css\images\ajax-loader.gif" />
     <Resource Include="www\css\images\bgPattern.gif" />
+    <Content Include="www\css\images\iconChrome.png" />
+    <Content Include="www\css\images\iconFirefox.png" />
+    <Content Include="www\css\images\iconIE.png" />
+    <Content Include="www\css\images\iconNetscape.png" />
     <Content Include="www\css\images\icons-18-black.png" />
     <Content Include="www\css\images\icons-18-white.png" />
     <Content Include="www\css\images\icons-36-black.png" />
     <Content Include="www\css\images\icons-36-white.png" />
+    <Content Include="www\css\images\iconSafari.png" />
+    <Content Include="www\css\images\iconTraveler.png" />
     <Content Include="www\css\jquery.mobile-1.2.0.css" />
     <Content Include="www\css\jquery.mobile.structure-1.2.0.css" />
     <Content Include="www\css\jquery.mobile.theme-1.2.0.css" />
