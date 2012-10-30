@@ -76,26 +76,42 @@
             </div>
         </div>
 
-        <div data-role="page" id="listpage" data-theme="b">
+        <div data-role="page" id="listpage" data-theme="g">
             <div data-role="header">
                 <a href="#home" data-icon="home" data-transition="flip">HOME</a>
                 <h4>List Page</h4>  
             </div>
-            <div data-role="content"> 
+            <div data-role="content" id="cityList"> 
                 <br/>
+
                 <ul data-role="listview" data-theme="b" data-filter="true" data-inset="true">
                     <li><a href="" >Denver</a></li>  
                     <li><a href="" >Chicago</a></li>
                     <li><a href="" >Indianapolis</a></li>
                     <li><a href="" >New Orleans</a></li>
                     <li><a href="" >Jacksonville</a></li>
-                    <li><a href="" >Tampa Bay</a></li>
-                    <li><a href="" >Tennessee</a></li>
-                    <li><a href="" >Baltimore</a></li> 
                 </ul>
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="true">
+                    <h2>Pets</h2>
+                    <ul data-role="listview" >
+                        <li><a href="" >Cat</a></li>  
+                        <li><a href="" >Dog</a></li>
+                        <li><a href="" >Fish</a></li>
+                        <li><a href="" >Bird</a></li>
+                    </ul>
+                </div>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>footer</h4>
+                <div data-role="navbar" class="nav-custom">
+                    <ul>
+                        <li><a href="#devicepage" class="navDevice" data-icon="custom">Device</a></li>
+                        <li><a href="#listpage" class="navList" data-icon="custom">List Page</a></li>
+                        <li><a href="#location" class="navLocation" data-icon="custom">Location</a></li>
+                        <li><a href="#camerapage" class="navCamera" data-icon="custom">Camera</a></li>
+                        <li><a href="#swipe" class="navSwipe" data-icon="custom">Swipe</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -109,7 +125,15 @@
                 <div id="map"></div>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>footer</h4>
+                <div data-role="navbar" class="nav-custom">
+                    <ul>
+                        <li><a href="#devicepage" class="navDevice" data-icon="custom">Device</a></li>
+                        <li><a href="#listpage" class="navList" data-icon="custom">List Page</a></li>
+                        <li><a href="#location" class="navLocation" data-icon="custom">Location</a></li>
+                        <li><a href="#camerapage" class="navCamera" data-icon="custom">Camera</a></li>
+                        <li><a href="#swipe" class="navSwipe" data-icon="custom">Swipe</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -122,6 +146,17 @@
                 <a id="takepicture" data-role="button" >take picture</a>
                 <p id="imageuri"></p>
                 <img src="css/images/ajax-loader.gif" id="imagesrc" height="400"  width="300" alt="aaa" class="cameraImage" />
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" class="nav-custom">
+                    <ul>
+                        <li><a href="#devicepage" class="navDevice" data-icon="custom">Device</a></li>
+                        <li><a href="#listpage" class="navList" data-icon="custom">List Page</a></li>
+                        <li><a href="#location" class="navLocation" data-icon="custom">Location</a></li>
+                        <li><a href="#camerapage" class="navCamera" data-icon="custom">Camera</a></li>
+                        <li><a href="#swipe" class="navSwipe" data-icon="custom">Swipe</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -145,7 +180,15 @@
                 </div>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>footer</h4> 
+                <div data-role="navbar" class="nav-custom">
+                    <ul>
+                        <li><a href="#devicepage" class="navDevice" data-icon="custom">Device</a></li>
+                        <li><a href="#listpage" class="navList" data-icon="custom">List Page</a></li>
+                        <li><a href="#location" class="navLocation" data-icon="custom">Location</a></li>
+                        <li><a href="#camerapage" class="navCamera" data-icon="custom">Camera</a></li>
+                        <li><a href="#swipe" class="navSwipe" data-icon="custom">Swipe</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -171,6 +214,17 @@
                     <p class="slidePage" style="background:#ccf"><img src="css/images/purple_cupcake.png" />3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div class="cycle-pager"></div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" class="nav-custom">
+                    <ul>
+                        <li><a href="#devicepage" class="navDevice" data-icon="custom">Device</a></li>
+                        <li><a href="#listpage" class="navList" data-icon="custom">List Page</a></li>
+                        <li><a href="#location" class="navLocation" data-icon="custom">Location</a></li>
+                        <li><a href="#camerapage" class="navCamera" data-icon="custom">Camera</a></li>
+                        <li><a href="#swipe" class="navSwipe" data-icon="custom">Swipe</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     

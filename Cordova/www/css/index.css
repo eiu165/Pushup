@@ -125,6 +125,10 @@ h1 {
 
 .savingContent {color:#fff;width:60%;margin:40px auto 0px auto;}
 .lbName {font-weight:bold;font-size:25px !important;}
+.nameHome {font-size:14px;}
+
+#cityList {width:60%;margin:40px auto 0px auto;}
+/*#cityList .ui-listview-filter .ui-input-search {width:60%;margin:40px auto 0px auto;}*/
 
 .cycle-slideshow {margin:40px auto 0px auto;width:50%;height:300px;overflow:hidden;box-shadow:0 0 16px #fff;-webkit-box-shadow:0 0 16px #fff;-mox-box-shadow:0 0 16px #fff;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}
 .cycle-slide {height:260px;padding:20px;font-size:16px;display:none;margin:0px;width:95%;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}
