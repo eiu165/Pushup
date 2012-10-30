@@ -64,6 +64,8 @@ var app = {
             //$('#nameLabel').text(personName);
             if (personName.length > 0) {
                 $('#nameLabel').text(personName);
+            } else {
+                $('#nameLabel').text('');
             }
         });
 
