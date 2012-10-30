@@ -132,4 +132,8 @@ h1 {
 /*footer nav */
 .nav-custom .ui-btn .ui-btn-inner {padding-top:40px !important;}
 .nav-custom .ui-btn .ui-icon {width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important;}
-#chat .ui-icon { background:url(../css/images/iconWhiteFeather.png) 50% 50% no-repeat; background-size: 24px 22px; }
+.navDevice .ui-icon { background:url(../css/images/iconWhiteFeather.png) 50% 50% no-repeat; background-size: 40px 40px; }
+.navList .ui-icon { background:url(../css/images/iconMusic.png) 50% 50% no-repeat; background-size: 40px 40px; }
+.navLocation .ui-icon { background:url(../css/images/iconToolbox.png) 50% 50% no-repeat; background-size: 40px 40px; }
+.navCamera .ui-icon { background:url(../css/images/iconCamera.png) 50% 50% no-repeat; background-size: 40px 40px; }
+.navSwipe .ui-icon { background:url(../css/images/iconSpreadsheet.png) 50% 50% no-repeat; background-size: 40px 40px; }
