@@ -65,7 +65,7 @@ var app = {
             if (personName != null) {
                 $('#nameLabel').text(personName);
             } else {
-                $('#nameLable').text('');
+                $('#nameLabel').text('');
             }
 
 
