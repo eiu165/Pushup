@@ -69,7 +69,7 @@ var app = {
             }
 
 
-            //            if (personName.length > 0) {
+            //            if (personName.length > 0) {  this breaks the js, there is no personName after clear
             //                $('#nameLabel').text(personName);
             //            } else {
             //                $('#nameLabel').text('');
