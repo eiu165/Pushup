@@ -129,11 +129,11 @@ var app = {
 
         });
 
-        $('.slidePage').live('swiperight', function () {
-            var nextslide = $(this).next('p');
-            if (nextslide.length > 0) 
+//        $('.slidePage').live('swiperight', function () {
+//            var nextslide = $(this).next('p');
+//            if (nextslide.length > 0) 
 
-        });
+//        });
 
     }, //onDeviceReady
 
