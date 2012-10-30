@@ -62,11 +62,18 @@ var app = {
             var personName = window.localStorage.getItem("name");
             console.log(' the person name is :' + personName);
             //$('#nameLabel').text(personName);
-            if (personName.length > 0) {
+            if (personName != null) {
                 $('#nameLabel').text(personName);
             } else {
-                $('#nameLabel').text('');
+                $('#nameLable').text('');
             }
+
+
+            //            if (personName.length > 0) {
+            //                $('#nameLabel').text(personName);
+            //            } else {
+            //                $('#nameLabel').text('');
+            //            }
         });
 
         $('#devicepage').live('pageshow', function () {
