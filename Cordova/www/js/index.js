@@ -52,6 +52,7 @@ var app = {
         });
 
         $('#home').live('pageshow', function () {
+            $('#nameHome').hide();
             var personName = window.localStorage.getItem("name");
             console.log(' the person name is :' + personName);
             //$('#nameLabel').text(personName);
@@ -215,7 +216,7 @@ var app = {
         //var message = parentElement.querySelector('.message');
         //message.setHTML(device.name + ' Device Name ' + device.cordova + ' Cordova Version');
         //$('.message').html(device.name + ' : Device Name <br/>' + device.cordova + ' : Cordova Version <br/>' + device.platform + ' : Device Platform<br/>' + device.uuid + ' : Device UUID<br/>' + device.version + ' : Device Version');
-        $('.message').html('Device Name : ' + device.name + '<br/>' + 'Cordova Version: ' + device.cordova + '<br/>' + 'Device Platform: ' + device.platform + '<br/>' + 'Device UUID: ' + device.uuid + '<br/>' + 'Device Version:' + device.version );
+        $('.message').html('Device Name : ' + device.name + '<br/>' + 'Cordova Version: ' + device.cordova + '<br/>' + 'Device Platform: ' + device.platform + '<br/>' + 'Device UUID: ' + device.uuid + '<br/>' + 'Device Version:' + device.version);
 
 
 
