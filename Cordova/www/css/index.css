@@ -128,3 +128,8 @@ h1 {
 .cycle-pager {text-align:center; top:10px; width:100%;}
 .cycle-pager span {color:#ddd;cursor:pointer;display:inline-block;font-size:50px;width:16px;height:16px;}
 .cycle-pager span.cycle-pager-active {color:#d69746;}
+
+/*footer nav */
+.nav-custom .ui-btn .ui-btn-inner {padding-top:40px !important;}
+.nav-custom .ui-btn .ui-icon {width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important;}
+#chat .ui-icon { background:url(../css/images/iconWhiteFeather.png) 50% 50% no-repeat; background-size: 24px 22px; }

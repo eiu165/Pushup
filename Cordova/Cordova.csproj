@@ -178,6 +178,7 @@
     <Content Include="www\css\images\icons-36-white.png" />
     <Content Include="www\css\images\iconSafari.png" />
     <Content Include="www\css\images\iconTraveler.png" />
+    <Content Include="www\css\images\iconWhiteFeather.png" />
     <Content Include="www\css\images\pinky_cupcake.png" />
     <Content Include="www\css\images\purple_cupcake.png" />
     <Content Include="www\css\jquery.mobile-1.2.0.css" />
