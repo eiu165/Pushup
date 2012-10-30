@@ -51,6 +51,12 @@ var app = {
             $('#nameHome').show();
         });
 
+        $('#clearbutton').click(function () {
+            window.localStorage.removeItem("name");
+            $('#name').val('');
+            $('#nameHome').hide();
+        });
+
         $('#home').live('pageshow', function () {
             $('#nameHome').hide();
             var personName = window.localStorage.getItem("name");
