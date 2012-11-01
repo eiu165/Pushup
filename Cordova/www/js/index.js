@@ -44,6 +44,9 @@ var app = {
     onDeviceReady: function () {
         app.receivedEvent('deviceready');
 
+        //try to eliminate bounce, will disable scrolling tho
+        $(document).bind('touchmove', function (e) { e.preventDefault(); });
+
         navigator.notification.alert("Your device: " + device.platform);
 
         $('#savebutton').click(function () {

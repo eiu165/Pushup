@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\notification-beep.wav" />
+    <Content Include="www\config.xml" />
     <Content Include="www\css\images\ajax-loader.gif" />
     <Resource Include="www\css\images\bgPattern.gif" />
     <Content Include="www\css\images\cyan_cupcake.png" />
