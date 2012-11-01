@@ -114,6 +114,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
+
 .cameraImage {margin:40px auto;}
 
 #no {display:none;}
@@ -130,11 +131,15 @@ h1 {
 #cityList {width:60%;margin:40px auto 0px auto;}
 /*#cityList .ui-listview-filter .ui-input-search {width:60%;margin:40px auto 0px auto;}*/
 
-.cycle-slideshow {margin:40px auto 0px auto;width:50%;height:300px;overflow:hidden;box-shadow:0 0 16px #fff;-webkit-box-shadow:0 0 16px #fff;-mox-box-shadow:0 0 16px #fff;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}
-.cycle-slide {height:260px;padding:20px;font-size:16px;display:none;margin:0px;width:95%;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}
-.cycle-pager {text-align:center; top:10px; width:100%;}
-.cycle-pager span {color:#ddd;cursor:pointer;display:inline-block;font-size:50px;width:16px;height:16px;}
+.cycle-slideshow {margin:40px auto 0px auto;width:100%;height:60%;overflow:hidden;}
+/*.cycle-slide {height:260px;padding:20px;font-size:16px;display:none;margin:0px;width:95%;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}*/
+.cycle-pager {text-align:center; top:10px; width:100%;height:100%}
+.cycle-pager span {color:#ddd;cursor:pointer;display:inline-block;font-size:80px;width:30px;height:16px;}
 .cycle-pager span.cycle-pager-active {color:#d69746;}
+#slidePages.ui-content {width:100%;height:100%;position:absolute;padding:0px;}
+
+.slideBox {width:100%;height:100%;}
+.slideBoxInner {margin:0 auto; width:80%; height:100%;background-color:#444;-webkit-border-radius:10px;-webkit-box-shadow:0 0 10px #000 inset;}
 
 /*footer nav */
 .nav-custom .ui-btn .ui-btn-inner {padding-top:40px !important;}

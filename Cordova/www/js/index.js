@@ -160,7 +160,9 @@ var app = {
 
         });
 
-
+        $('#swipe').live('pageshow', function () {
+            $('#slidePages.ui-content').
+        });
 
     }, //onDeviceReady
 
